@@ -1,0 +1,36 @@
+<div *ngIf="isLoginError" class="red-text center error-message">
+  <i class="material icons"></i> username or password is incorrect !
+</div>
+
+<form class="col s12 white" #loginForm="ngForm" (ngSubmit)="login(ngUserName.value, ngPassword.value);" novalidate>
+
+  <div class="form-group">
+    <label for="name" class="cols-sm-2 control-label">UserName</label>
+    <div class="cols-sm-10">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+        <input type="text" required #ngUserName="ngModel" [ngModel]="UserName" class="form-control" name="UserName" id="UserName"
+          placeholder="Enter your UserName" />
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="name" class="cols-sm-2 control-label">Password</label>
+    <div class="cols-sm-10">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+        <input type="password" required [ngModel]="Password" #ngPassword="ngModel" class="form-control" name="Password" id="Password"
+          placeholder="Enter your Password" />
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group ">
+
+    <button type="submit" id="button" class="btn btn-primary btn-lg btn-block login-button">Login</button>
+  </div>
+
+
+
+</form>
