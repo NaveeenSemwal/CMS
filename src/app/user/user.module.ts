@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { ProductListComponent } from '../product/product-list/product-list.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from '../auth/auth.interceptor';
+import { CategoryService } from '../cms-service/category.service';
 
 
 
@@ -24,7 +25,7 @@ import { AuthInterceptor } from '../auth/auth.interceptor';
     RouterModule
   ],
   declarations: [UserComponent, SignInComponent, SignUpComponent, ProductListComponent],
-  providers: [UserService],
+  providers: [UserService,CategoryService],
   exports: [UserComponent, SignInComponent, SignUpComponent, ProductListComponent]
 })
 export class UserModule { }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from '../cms-service/category.service';
+import { Category } from '../cms-model/category.model';
 
 @Component({
   selector: 'cms-category-list',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryListComponent implements OnInit {
 
-  constructor() { }
+  categories: Array<any> = [];
+
+
+  constructor(private _categoryService: CategoryService) { }
 
   ngOnInit() {
+
+   this. GetAll();
   }
 
+
+  GetAll = () => {
+
+    this._categoryService.GetAllCategories().subscribe(response => this.categories = response),
+      (error: any) => {
+        console.log('In the error block in component');
+        console.log(error._body);
+      }
+  }
 }

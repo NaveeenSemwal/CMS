@@ -12,6 +12,8 @@ import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { AuthGuard } from './auth/auth.guard';
+import { CategoryListComponent } from './category-list/category-list.component';
+import { HomeComponent } from './home/home.component';
 
 /*  http://localhost:4200/   :   User component will be loaded by default in    app.component.html
 
@@ -24,7 +26,7 @@ http://localhost:4200/sign-in  :  User component will be loaded and it will also
 */
 const routes: Routes = [
   {
-    path: '', component: UserComponent
+    path: '', component: HomeComponent
   },
   {
     path: 'sign-up', component: UserComponent,
@@ -36,6 +38,10 @@ const routes: Routes = [
   },
   {
     path: 'product-list', component: ProductListComponent , canActivate : [AuthGuard]
+  },
+
+  {
+    path: 'category-list', component: CategoryListComponent , canActivate : [AuthGuard]
   },
 ];
 

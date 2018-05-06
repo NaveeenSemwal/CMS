@@ -9,14 +9,15 @@ import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductGridComponent } from './src/app/product-grid/product-grid.component';
-import { CategoryListComponent } from './src/app/category-list/category-list.component';
-import { BrandListComponent } from './src/app/brand-list/brand-list.component';
-import { PriceFilterComponent } from './src/app/price-filter/price-filter.component';
-import { LatestProductComponent } from './src/app/latest-product/latest-product.component';
-import { PopularProductComponent } from './src/app/popular-product/popular-product.component';
-import { TopRatedProductComponent } from './src/app/top-rated-product/top-rated-product.component';
-import { ProductListComponent } from './src/app/product-list/product-list.component';
+import { ProductGridComponent } from './product-grid/product-grid.component';
+import { CategoryListComponent } from './category-list/category-list.component';
+import { BrandListComponent } from './brand-list/brand-list.component';
+import { PriceFilterComponent } from './price-filter/price-filter.component';
+import { LatestProductComponent } from './latest-product/latest-product.component';
+import { PopularProductComponent } from './popular-product/popular-product.component';
+import { TopRatedProductComponent } from './top-rated-product/top-rated-product.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { HomeComponent } from './home/home.component';
 
 // Note : We need to declare AuthGuard in the Module's provider section.
 
@@ -30,7 +31,8 @@ import { ProductListComponent } from './src/app/product-list/product-list.compon
     LatestProductComponent,
     PopularProductComponent,
     TopRatedProductComponent,
-    ProductListComponent
+    ProductListComponent,
+    HomeComponent
   ],
 
   imports: [

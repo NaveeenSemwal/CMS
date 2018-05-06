@@ -29,7 +29,7 @@ export class SignInComponent implements OnInit {
 
       localStorage.setItem('tokenType', response.token_type);
 
-      this.router.navigate(['/product-list']);
+      this.router.navigate(['/category-list']);
     },
 
       (error: any) => {
